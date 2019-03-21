@@ -1,2 +1,5 @@
 # bdd-automation
-GHerkins Cucumber Selenuim BDD Integration Tests
+
+### To run Tests
+
+1. Run `mvn test`
