@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <style>
+        body {
+    max-width: 980px;
+    margin: auto;
+}
+
+#tablecontainer {
+    margin-top: 20px;
+    display:none;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    border: solid 2px blue;
+    border-radius: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <form method="post" name="searchaNumber" action="" onSubmit="disTable(); return false;">
+            <p>Enter person's ANumber</p>
+            <div class="form-group">
+                <label for="ANumber">ANumber</label>
+                <input type="number" class="form-control" id="aNumber" placeholder="Enter Person's ANumber">
+            </div>
+            <br>
+            <input type="checkbox" id="cdd1" value=""> CDD <br>
+            <br>
+            <input type="Submit" id="Button1" value="Request" disabled>
+        </form>
+        <form method="post" name="searchNames" action="" onSubmit="disTable(); return false;">
+            <p>Or enter the person's first and last name</p>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter last Name">
+            </div>
+            <br>
+            <input type="checkbox" id="cdd2" value=""> CDD <br>
+            <br>
+            <input type="Submit" id="Button2" value="Request" disabled>
+        </form>
+        <form method="post" name="searchDOB" action="" onSubmit="disTable(); return false;">
+            <p>Or enter person's date of birth</p>
+            <div class="form-group">
+                <label for="dateOfBirth">DOB</label>
+                <input type="date" class="form-control" id="dateOfBirth" placeholder="Enter the date of birth">
+            </div>
+            <br>
+            <input type="checkbox" id="cdd3" value=""> CDD <br>
+            <br>
+            <input type="Submit" id="Button3" value="Request" disabled>
+        </form>
+    </div>
+    <div id="tablecontainer">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
