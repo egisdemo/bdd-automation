@@ -31,4 +31,36 @@
 	    <version>3.141.59</version>
 	</dependency>  
   </dependencies>
+<build>
+	 <pluginManagement>
+		<plugins>
+			<!-- Sonar Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.4.0.905</version>
+            </plugin>
+			<!-- owas plugin-->
+		   		 <plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <version>5.0.0-M1</version>
+              <configuration>
+                  <failBuildOnCVSS>10</failBuildOnCVSS>
+				  <format>xml</format>
+              </configuration>
+              <executions>
+                  <execution>
+				  	<phase>${skipOwaspCheck}</phase>
+                      <goals>
+                          <goal>check</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
+
+		 
+        </plugins>
+		</pluginManagement>
+		</build>
 </project>
